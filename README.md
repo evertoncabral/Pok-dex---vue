@@ -1,2 +1,2 @@
-# Pok-dex---vue
+# Pokedex com Vue
 Desenvolvendo sua Pokédex
