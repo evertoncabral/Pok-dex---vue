@@ -1,13 +1,20 @@
 <template>
   <div id="pokedex">
-   <h1 class="text--yellow">pokedex DIO</h1>
+
+  <Pokedex/>
+
+
   </div>
 </template>
 
 <script>
+import Pokedex from './components/Pokedex.vue'
 
 export default {
   name: "App",
+  components:{
+    Pokedex,
+  }
   
 };
 </script>
@@ -20,6 +27,9 @@ export default {
   min-height: 100vh;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh-20vh);
 }
 </style>
