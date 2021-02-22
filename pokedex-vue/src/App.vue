@@ -28,8 +28,6 @@ export default {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  justify-content: center;
-  align-items: center;
   height: calc(100vh-20vh);
 }
 </style>
