@@ -76,5 +76,32 @@ $triangle-color: color(yellow);
       }
     }
   }
+
+  &--back {
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    @media (min-width: $viewport-medium) {
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .back--triangle {
+      border-top: $triangle-size solid $triangle-color;
+      border-right: $triangle-size solid transparent;
+      border-left: $triangle-size solid transparent;
+      width: 0;
+      height: 0;
+
+      @media (min-width: $viewport-medium) {
+        border-top: $triangle-size solid transparent;
+        border-bottom: $triangle-size solid transparent;
+        border-left: $triangle-size solid $triangle-color;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
 }
 </style>
