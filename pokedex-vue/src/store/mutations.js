@@ -55,7 +55,7 @@ export default {
 	setIsPokemonSearch(flag) {
 		state.isPokemonSearch = flag;
 	},
-	//Informa que a busca / Search deu erro 
+	//Informa que a busca / Search deu erro
 	setSearchHasError(flag) {
 		state.searchHasError = flag;
 	},

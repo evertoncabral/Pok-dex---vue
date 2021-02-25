@@ -1,8 +1,8 @@
 <template>
   <ul class="list text--white bg--black">
-    <p v-if="isSearching" class="list--message">Looking for the pokemon</p>
+    <p v-if="isSearching" class="list--message">Fazendo busca pelo  pokemon</p>
     <p v-else-if="hasSearchError" class="list--message">
-      We couldn't find this pokemon
+      Não encontramos o Pokemon
     </p>
 
     <ListItem v-else-if="isPokemonSearch" v-bind="pokemonsList[0]" />
