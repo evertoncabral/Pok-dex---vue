@@ -12,33 +12,57 @@ export default {
 	setList(list) {
 		state.list.push(...list);
 		state.tmpList.push(...list);
-    },
-    
-    //Informa se a pokedex precisa de mais dados
+	},
 
-    setListHasNext(flag) {
-        state.listHasNext = flag;
-    },
+	//Informa se a pokedex precisa de mais dados
 
-    //Informa se a pokedex terminou de buscar (fetch )os dados
+	setListHasNext(flag) {
+		state.listHasNext = flag;
+	},
 
-    setListHasCompleted(flag) {
-        state.listHasCompleted = flag;
-    },
+	//Informa se a pokedex terminou de buscar (fetch )os dados
 
-    // Informar se a pokedex teve erro na busca(fetch)
+	setListHasCompleted(flag) {
+		state.listHasCompleted = flag;
+	},
 
-    setListHasError(flag) {
-        state.setListHasError = flag;
-    },
+	// Informar se a pokedex teve erro na busca(fetch)
 
-    // Resetar a pokedex para o ultimo cache e remove a informação de search
+	setListHasError(flag) {
+		state.setListHasError = flag;
+	},
 
-    resetList() {
-        state.list = [...state.tmpList];
-        state.isPokemonSearch = false;
-        state.listHasError = false;
-        state.searchHasError = false;
-    },
+	// Resetar a pokedex para o ultimo cache e remove a informação de search
 
+	resetList() {
+		state.list = [...state.tmpList];
+		state.isPokemonSearch = false;
+		state.listHasError = false;
+		state.searchHasError = false;
+	},
+
+	// Adiciona/exibe na pokedex apenas no Pokemon que foi feito a busca
+	setPokemonSearched(pokemon) {
+		state.list = [pokemon];
+	},
+
+	// Informar que o Search/busca esta acontecendo
+	setIsSearching(flag) {
+		state.isSearching = flag;
+	},
+
+	//Informa que a busca / Search foi feita
+	setIsPokemonSearch(flag) {
+		state.isPokemonSearch = flag;
+	},
+	//Informa que a busca / Search deu erro 
+	setSearchHasError(flag) {
+		state.searchHasError = flag;
+	},
+
+	// Select Pokemon
+	setPokemonId(id = null) {
+		state.isPokemonSearch = false;
+		state.pokemonId = id;
+	}
 };
