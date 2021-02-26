@@ -5,13 +5,13 @@
     </div>
 
     <div class="panel--back bg--red-01" @click="isOpen = true">
-      <div class="back--triangle"></div>
+      <div class="back--triangle" />
     </div>
   </div>
 </template>
 
 <script>
-import RightPannelContent from "./RightPanelContent.vue";
+import RightPanelContent from "./RightPanelContent.vue";
 export default {
   name: "RightPanel",
   components: {
@@ -28,19 +28,16 @@ export default {
 <style lang="scss" scoped>
 $triangle-size: 30px;
 $triangle-color: color(yellow);
-
 .panel {
   display: flex;
   width: 100%;
   background-color: transparent;
   top: 40px;
   z-index: 1;
-
   @media (min-width: $viewport-medium) {
     width: calc(50% - 20px);
-    top: 0;
+    top: 10px;
   }
-
   &--front,
   &--back {
     position: absolute;
@@ -58,32 +55,28 @@ $triangle-color: color(yellow);
       200px 75px
     );
     transition: all 1.5s ease-in-out;
-    transform: translateY(calc(-100% - 40%)) rotateX(0deg);
+    transform: translateY(calc(-100% - 40px)) rotateX(0deg);
     transform-origin: left bottom;
-
     @media (min-width: $viewport-medium) {
-      transform: translateX(calc(-100% - 40px)) rotate(0deg);
+      transform: translateX(calc(-100% - 40px)) rotateY(0deg);
       transform-origin: right top;
     }
   }
-
   &.open {
     .panel--front,
     .panel--back {
-      transform: rotate(-180deg) translateY(100%);
+      transform: rotateX(-180deg) translateY(100%);
       @media (min-width: $viewport-medium) {
         transform: translateX(-100%) rotateY(180deg);
       }
     }
   }
-
   &--back {
     display: flex;
     justify-content: center;
     backface-visibility: hidden;
     cursor: pointer;
-
-    @media (min-width: $viewport-medium) {
+    @media (min-height: $viewport-medium) {
       align-items: center;
       justify-content: flex-start;
     }
@@ -93,13 +86,10 @@ $triangle-color: color(yellow);
       border-left: $triangle-size solid transparent;
       width: 0;
       height: 0;
-
-      @media (min-width: $viewport-medium) {
+      @media (min-height: $viewport-medium) {
         border-top: $triangle-size solid transparent;
         border-bottom: $triangle-size solid transparent;
         border-left: $triangle-size solid $triangle-color;
-        width: 0;
-        height: 0;
       }
     }
   }

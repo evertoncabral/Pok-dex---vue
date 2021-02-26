@@ -1,4 +1,3 @@
-import { set } from "vue/types/umd";
 import state from "./state";
 
 export default {

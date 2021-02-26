@@ -7,7 +7,7 @@
 <script>
 import List from "@/components/List/List.vue";
 export default {
-  name: "LeftPannelContent",
+  name: "LeftPanelContent",
   components: {
     List,
   },
