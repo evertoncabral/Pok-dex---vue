@@ -13,6 +13,7 @@
 import ListItem from "@/components/List/ListItem.vue";
 import { state } from "@/store";
 import { parsePokemonInfo } from "@/utils";
+
 const statsNames = {
   hp: "HP",
   attack: "Attack",
@@ -21,6 +22,7 @@ const statsNames = {
   "special-attack": "Sp.atk",
   "special-defense": "Sp. def",
 };
+
 export default {
   name: "PokemonDescription",
   components: {
@@ -43,7 +45,9 @@ export default {
 
     if (pokemonInfo) {
       const infoParsed = parsePokemonInfo(pokemonInfo);
+
       const { stats, ...rest } = infoParsed;
+
       this.mainInfo = rest;
       this.stats = stats;
     }

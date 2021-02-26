@@ -19,6 +19,7 @@
     position: absolute;
     height: 4px;
     width: 100%;
+
     &--top {
       top: 20px;
     }
@@ -26,21 +27,26 @@
     &--bottom {
       bottom: 20px;
     }
+
     @media (max-width: 767px) {
       height: 100%;
       width: 4px;
+
       &--top,
       &--bottom {
         top: 0;
       }
+
       &--top {
         left: 20px;
       }
+
       &--bottom {
         right: 20px;
       }
     }
   }
+
   @media (max-width: 767px) {
     width: 100%;
     top: 50%;

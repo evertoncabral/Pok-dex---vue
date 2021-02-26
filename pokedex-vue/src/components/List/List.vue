@@ -1,8 +1,8 @@
 <template>
   <ul class="list text--white bg--black">
-    <p v-if="isSearching" class="list--message">Fazendo busca pelo  pokemon</p>
+    <p v-if="isSearching" class="list--message">Looking for the pokemon</p>
     <p v-else-if="hasSearchError" class="list--message">
-      Não encontramos o Pokemon
+      We couldn't find this pokemon
     </p>
 
     <ListItem v-else-if="isPokemonSearch" v-bind="pokemonsList[0]" />
@@ -23,6 +23,7 @@
 import { state, getters, actions } from "@/store";
 import PokemonDescription from "@/components/PokemonDescription/PokemonDescription.vue";
 import ListItem from "./ListItem.vue";
+
 export default {
   name: "List",
   components: {
@@ -77,6 +78,7 @@ export default {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }

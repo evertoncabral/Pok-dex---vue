@@ -1,38 +1,33 @@
 import state from "./state";
 
 export default {
-	//faz o update da pokex no efeito de loading offset
+	// Updates the pokedex loading offset
 	updateOffset() {
 		state.offset += state.limit;
 	},
 
-	//Adiciona Pokemons na pokedex com o list infinito
-
+	// Adds pokemons to the pokedex for the infinite loading
 	setList(list) {
 		state.list.push(...list);
 		state.tmpList.push(...list);
 	},
 
-	//Informa se a pokedex precisa de mais dados
-
+	// Inform if the pokedex needs more data
 	setListHasNext(flag) {
 		state.listHasNext = flag;
 	},
 
-	//Informa se a pokedex terminou de buscar (fetch )os dados
-
+	// Informs if the pokedex has finished fetching data
 	setListHasCompleted(flag) {
 		state.listHasCompleted = flag;
 	},
 
-	// Informar se a pokedex teve erro na busca(fetch)
-
+	// Informs if the pokedex got an error
 	setListHasError(flag) {
-		state.setListHasError = flag;
+		state.listHasError = flag;
 	},
 
-	// Resetar a pokedex para o ultimo cache e remove a informação de search
-
+	// Resets the pokedex to the last cache and removes search information
 	resetList() {
 		state.list = [...state.tmpList];
 		state.isPokemonSearch = false;
@@ -41,21 +36,20 @@ export default {
 		state.pokemonId = null;
 	},
 
-	// Adiciona/exibe na pokedex apenas no Pokemon que foi feito a busca
+	// Adds tp the pokedex only the searched pokemon
 	setPokemonSearched(pokemon) {
 		state.list = [pokemon];
 	},
 
-	// Informar que o Search/busca esta acontecendo
+	// Informs that the search is happening
 	setIsSearching(flag) {
 		state.isSearching = flag;
 	},
 
-	//Informa que a busca / Search foi feita
 	setIsPokemonSearch(flag) {
 		state.isPokemonSearch = flag;
 	},
-	//Informa que a busca / Search deu erro
+
 	setSearchHasError(flag) {
 		state.searchHasError = flag;
 	},

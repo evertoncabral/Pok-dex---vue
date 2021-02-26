@@ -4,7 +4,7 @@
 
 <script>
 	export default {
-		name: 'TopPannelButton',
+		name: 'TopPanelButton',
 	};
 </script>
 
@@ -18,16 +18,20 @@
 		margin-right: 8px;
 		box-shadow: 5px 3px 5px 0 rgba(color(black), 0.35);
 		cursor: pointer;
+
 		&:hover,
 		&:focus {
 			filter: brightness(1.5);
 		}
+
 		&:focus {
 			outline: none;
 		}
+
 		&:first-child{
 			margin-right: 30px;
 		}
+
 		&::before{
 			content: '';
 			position: absolute;
@@ -39,4 +43,5 @@
 			background-color: color(white);
 		}
 	}
+
 </style>

@@ -1,33 +1,26 @@
 <template>
   <div id="pokedex">
-
-  <Pokedex/>
-
-
+    <Pokedex />
   </div>
 </template>
 
 <script>
-import Pokedex from './components/Pokedex.vue'
-
+import Pokedex from "./components/Pokedex.vue";
 export default {
   name: "App",
-  components:{
+  components: {
     Pokedex,
-  }
-  
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-
-#pokedex{
+#pokedex {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 20px);
   padding: 20px;
-  height: calc(100vh-20vh);
 }
 </style>

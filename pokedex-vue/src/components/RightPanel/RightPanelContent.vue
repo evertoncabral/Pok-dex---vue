@@ -34,6 +34,7 @@ export default {
       name: "",
     };
   },
+
   methods: {
     clear() {
       this.name = "";
@@ -53,10 +54,12 @@ export default {
   justify-content: space-between;
   flex: 1;
   transform: rotateX(-180deg);
+
   @media (min-width: $viewport-medium) {
     transform: rotateY(-180deg);
     padding-top: 50px;
   }
+
   &__label {
     display: flex;
     flex-direction: column;
@@ -70,35 +73,42 @@ export default {
       padding: 12px 24px 24px;
     }
   }
+
   &__input {
     color: inherit;
     background: transparent;
     border: none;
     border-bottom: 2px solid color(white);
     padding: 4px 8px;
+
     @media (min-width: $viewport-medium) {
       padding: 8px;
     }
   }
+
   .buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
     .btn {
       border-radius: 8px;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
+
       &--clear {
         width: 80px;
         padding: 8px;
         margin-right: 16px;
         border: none;
       }
+
       &--search {
         width: 120px;
         padding: 15px;
         border: 4px solid color(black);
+
         @media (min-width: $viewport-medium) {
           width: 160px;
         }
