@@ -39,6 +39,7 @@ export default {
 		state.isPokemonSearch = false;
 		state.listHasError = false;
 		state.searchHasError = false;
+		state.pokemonId = null;
 	},
 
 	// Adiciona/exibe na pokedex apenas no Pokemon que foi feito a busca
