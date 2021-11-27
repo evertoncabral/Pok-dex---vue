@@ -1,3 +1,7 @@
+Projeto em Vue seguindo passo a passo do curs da plataforma DIO.
+
+
+
 # Pokedex com Vue
 Desenvolvendo sua Pokédex
 
